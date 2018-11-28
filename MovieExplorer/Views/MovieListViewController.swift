@@ -65,7 +65,7 @@ class MovieListViewController: UITableViewController {
             let url = URL(string: "http://mskr.name")!
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         })
-        showAlert(title: "О приложении", body: "Приложение было создано в кач-ве демонстрации кода компании Arcsinus.\n\nРазработчик: Скрябин Максим", button: "Ок", actions: [web])
+        showAlert(title: "О приложении", body: "Приложение было создано в кач-ве демонстрации кода компании KTS.\n\nРазработчик: Скрябин Максим", button: "Ок", actions: [web])
     }
     
     @objc func favoriteButtonTapped() {
