@@ -32,7 +32,6 @@ class DBManager {
     
     class func loadFavoriteMovies() -> [Movie] {
         let realm = try! Realm()
-        print("🔥 returning \(Array(realm.objects(Movie.self)).count) objects")
         return Array(realm.objects(Movie.self))
     }
     

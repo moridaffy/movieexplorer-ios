@@ -25,9 +25,6 @@ MovieExplorer is a simple app, which allows you to browse information about the 
 * Application is using <a href="https://github.com/ReactiveX/RxSwift">RxSwift</a> and <a href="https://github.com/RxSwiftCommunity/RxDataSources">RxDataSources</a> for data binding, <a href="https://github.com/Alamofire/Alamofire">Alamofire</a> for networking, <a href="https://github.com/onevcat/Kingfisher">Kingfisher</a> for asynchronous image loading and caching and <a href="https://github.com/realm/realm-cocoa">Realm</a> for craeting local DB
 * UI adapts to different screen sizes using AutoLayout
 
-## TODO
-- [ ] Russian & English localization
-
 ## How to install
 * Fork/clone the repo
 * Install pods by running ```pod install``` in terminal from project's folder

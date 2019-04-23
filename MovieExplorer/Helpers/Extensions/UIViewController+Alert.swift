@@ -28,19 +28,19 @@ extension UIViewController {
     }
     
     func showAlertError(error: Error?, desc: String?, critical: Bool) {
-        var body: String = desc ?? "Произошла неизвестная ошибка"
+        var body: String = desc ?? NSLocalizedString("Unknown error occured", comment: "")
         if let error = error {
-            body += "\nОписание ошибки: \(error.localizedDescription)"
+            body += "\n" + NSLocalizedString("Error description", comment: "") + ": \(error.localizedDescription)"
         }
         var button: String? {
             if critical {
                 return nil
             } else {
-                return "Ок"
+                return NSLocalizedString("Ok", comment: "")
             }
         }
         
-        showAlert(title: "Ошибка", body: body, button: button, actions: nil)
+        showAlert(title: NSLocalizedString("Error", comment: ""), body: body, button: button, actions: nil)
     }
     
 }

@@ -32,15 +32,15 @@ class MovieListViewController: UITableViewController {
     
     func setupNavigationBar() {
         if !model.showingFavorite {
-            title = "Список фильмов"
+            title = NSLocalizedString("Films", comment: "")
             searchBar.delegate = self
-            let aboutButton = UIBarButtonItem(title: "О приложении", style: .done, target: self, action: #selector(aboutButtonTapped))
+            let aboutButton = UIBarButtonItem(title: NSLocalizedString("About", comment: ""), style: .done, target: self, action: #selector(aboutButtonTapped))
             navigationItem.leftBarButtonItem = aboutButton
             
-            let favoriteButton = UIBarButtonItem(title: "Избранное", style: .plain, target: self, action: #selector(favoriteButtonTapped))
+            let favoriteButton = UIBarButtonItem(title: NSLocalizedString("Favorites", comment: ""), style: .plain, target: self, action: #selector(favoriteButtonTapped))
             navigationItem.rightBarButtonItem = favoriteButton
         } else {
-            title = "Избранное"
+            title = NSLocalizedString("Favorites", comment: "")
             tableView.tableHeaderView = nil
         }
     }
@@ -89,7 +89,7 @@ class MovieListViewController: UITableViewController {
                         self?.doneLoading(removeFooter: false)
                     } else {
                         self?.doneLoading(removeFooter: false)
-                        self?.showAlertError(error: error, desc: "Не удалось загрузить список фильмов по следующему поисковому запросу: \(text)", critical: false)
+                        self?.showAlertError(error: error, desc: NSLocalizedString("Unable to load films using next search value", comment: "") + ": \(text)", critical: false)
                     }
                 }
             } else {
@@ -99,7 +99,7 @@ class MovieListViewController: UITableViewController {
                         self?.doneLoading(removeFooter: false)
                     } else {
                         self?.doneLoading(removeFooter: false)
-                        self?.showAlertError(error: error, desc: "Не удалось загрузить список популярных фильмов", critical: false)
+                        self?.showAlertError(error: error, desc: NSLocalizedString("Unable to load top popular films", comment: ""), critical: false)
                     }
                 }
             }
@@ -110,11 +110,13 @@ class MovieListViewController: UITableViewController {
     }
     
     @objc func aboutButtonTapped() {
-        let web = UIAlertAction(title: "Веб-сайт", style: .default, handler: { _ in
+        let web = UIAlertAction(title: NSLocalizedString("Website", comment: ""), style: .default, handler: { _ in
             let url = URL(string: "http://mskr.name")!
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         })
-        showAlert(title: "О приложении", body: "Разработчик: Скрябин Максим", button: "Ок", actions: [web])
+        showAlert(title: NSLocalizedString("About", comment: ""),
+                  body: NSLocalizedString("Developer", comment: "") + ": " + NSLocalizedString("Maxim Skryabin", comment: ""),
+                  button: NSLocalizedString("Ok", comment: ""), actions: [web])
     }
     
     @objc func favoriteButtonTapped() {
@@ -132,7 +134,7 @@ class MovieListViewController: UITableViewController {
                     self?.model.movies.value.append(contentsOf: newMovies.sorted(by: { $0.vote > $1.vote }))
                     self?.doneLoading(removeFooter: true)
                 } else {
-                    self?.showAlertError(error: error, desc: "Не удалось загрузить дополнительные фильмы", critical: false)
+                    self?.showAlertError(error: error, desc: NSLocalizedString("Unable to load additional films", comment: ""), critical: false)
                     self?.doneLoading(removeFooter: true)
                 }
             }
@@ -143,7 +145,7 @@ class MovieListViewController: UITableViewController {
                     self?.model.movies.value.append(contentsOf: newMovies.sorted(by: { $0.vote > $1.vote }))
                     self?.doneLoading(removeFooter: true)
                 } else {
-                    self?.showAlertError(error: error, desc: "Не удалось загрузить дополнительные фильмы", critical: false)
+                    self?.showAlertError(error: error, desc: NSLocalizedString("Unable to load additional films", comment: ""), critical: false)
                     self?.doneLoading(removeFooter: true)
                 }
             }
@@ -155,7 +157,7 @@ class MovieListViewController: UITableViewController {
             let label = UILabel()
             label.textColor = UIColor.darkGray
             label.font = UIFont.italicSystemFont(ofSize: 14.0)
-            label.text = model.showingFavorite ? "У Вас пока что нет ни одного фильма в списке избранных" : "Введите поисковый запрос в поле выше и нажмите кнопку \"Поиск\", чтобы выполнить поиск фильмов с указанным поисковым запросом, или же просто потяните вниз эту ячейку для загрузки и отображения списка самых популярных фильмов по версии TMDb"
+            label.text = model.showingFavorite ? NSLocalizedString("You don't have any favorite films yet", comment: "") : NSLocalizedString("Enter search value in the text field above and hit \"Search\" button to get a list of films. Or just pull down to get a list of most popular films according to TMDb", comment: "")
             label.textAlignment = .center
             label.numberOfLines = 0
             label.frame.size = CGSize(width: tableView.frame.width,

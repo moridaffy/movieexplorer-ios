@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  MovieExplorer
+
+  Created by Максим Скрябин on 23/04/2019.
+  Copyright © 2019 MSKR. All rights reserved.
+*/
+
+"LANGUAGE_KEY" = "en";
+
+"Films" = "Films";
+"About" = "About";
+"Favorites" = "Favorites";
+"Unable to load films using next search value" = "Unable to load films using next search value";
+"Unable to load top popular films" = "Unable to load top popular films";
+"Website" = "Website";
+"Developer" = "Developer";
+"Maxim Skryabin" = "Maxim Skryabin";
+"Ok" = "Ok";
+"Unable to load additional films" = "Unable to load additional films";
+"You don't have any favorite films yet" = "You don't have any favorite films yet";
+"Enter search value in the text field above and hit \"Search\" button to get a list of films. Or just pull down to get a list of most popular films according to TMDb" = "Enter search value in the text field above and hit \"Search\" button to get a list of films. Or just pull down to get a list of most popular films according to TMDb";
+"Details" = "Details";
+"Tagline" = "Tagline";
+"Description" = "Description";
+"Genre" = "Genre";
+"Release date" = "Release date";
+"User rating" = "User rating";
+"из 10.0" = "out of 10.0";
+"Adult" = "Adult";
+"Yes" = "Yes";
+"No" = "No";
+"Unknown error occured" = "Unknown error occured";
+"Error description" = "Error description";
+"Error" = "Error";

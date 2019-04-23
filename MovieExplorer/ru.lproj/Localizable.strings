@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  MovieExplorer
+
+  Created by Максим Скрябин on 23/04/2019.
+  Copyright © 2019 MSKR. All rights reserved.
+*/
+
+"LANGUAGE_KEY" = "ru";
+
+"Films" = "Фильмы";
+"About" = "О приложении";
+"Favorites" = "Избранные";
+"Unable to load films using next search value" = "Не удалось выполнить поиск";
+"Unable to load top popular films" = "Не удалось загрузить список популярных фильмов";
+"Website" = "Вебсайт";
+"Developer" = "Разработчик";
+"Maxim Skryabin" = "Максим Скрябин";
+"Ok" = "Ок";
+"Unable to load additional films" = "Не удалось загрузить дополнительные фильмы";
+"You don't have any favorite films yet" = "У Вас пока что нет избранных фильмов";
+"Enter search value in the text field above and hit \"Search\" button to get a list of films. Or just pull down to get a list of most popular films according to TMDb" = "Введите поисковый запрос в поле выше и нажмите кнопку \"Поиск\" или же просто потяните вниз, чтобы загрузить список самых популярных фильмов по версии TMDb";
+"Details" = "Детали";
+"Tagline" = "Слоган";
+"Description" = "Описание";
+"Genre" = "Жанр";
+"Release date" = "Дата релиза";
+"User rating" = "Оценка пользователей";
+"из 10.0" = "из 10.0";
+"Adult" = "Для взрослых";
+"Yes" = "Да";
+"No" = "Нет";
+"Unknown error occured" = "Произошла неизвестная ошибка";
+"Error description" = "Описание ошибки";
+"Error" = "Ошибка";

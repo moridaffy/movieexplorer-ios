@@ -37,7 +37,7 @@ class MovieDetailsViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        title = "Детали"
+        title = NSLocalizedString("Details", comment: "")
         
         let favoriteIcon = DBManager.isFavorite(model.movie) ? UIImage(named: "icon_heart_filled")! : UIImage(named: "icon_heart")!
         let favoriteButton = UIBarButtonItem(image: favoriteIcon, style: .done, target: self, action: #selector(favoriteButtonTapped))

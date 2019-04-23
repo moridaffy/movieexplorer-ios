@@ -20,26 +20,26 @@ class MovieDetailsViewModel {
         var contentArray: [String] = []
         
         if let tagline = movie.tagline {
-            titleArray.append("Слоган")
+            titleArray.append(NSLocalizedString("Tagline", comment: ""))
             contentArray.append(tagline)
         }
         if let desc = movie.desc {
-            titleArray.append("Описание")
+            titleArray.append(NSLocalizedString("Description", comment: ""))
             contentArray.append(desc)
         }
         if let genre = movie.getGenresString() {
-            titleArray.append("Жанры")
+            titleArray.append(NSLocalizedString("Genre", comment: ""))
             contentArray.append(genre)
         }
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy"
         
-        titleArray.append("Дата релиза")
+        titleArray.append(NSLocalizedString("Release date", comment: ""))
         contentArray.append(formatter.string(from: movie.date))
-        titleArray.append("Рейтинг пользователей")
-        contentArray.append("\(movie.vote) из 10.0")
-        titleArray.append("Для взрослых")
-        contentArray.append(movie.adult ? "Да" : "Нет")
+        titleArray.append(NSLocalizedString("User rating", comment: ""))
+        contentArray.append("\(movie.vote) " + NSLocalizedString("из 10.0", comment: ""))
+        titleArray.append(NSLocalizedString("Adult", comment: ""))
+        contentArray.append(movie.adult ? NSLocalizedString("Yes", comment: "") : NSLocalizedString("No", comment: ""))
         
         guard titleArray.count == contentArray.count else { fatalError() }
         self.titleArray.value = titleArray

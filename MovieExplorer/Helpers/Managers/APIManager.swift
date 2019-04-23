@@ -26,7 +26,7 @@ class APIManager {
         static let search: String = "/search"
         
         static let apiKey: String = "api_key=\(Keys.v3APIKey!)"
-        static let language: String = "language=ru"
+        static let language: String = "language=" + NSLocalizedString("LANGUAGE_KEY", comment: "")
         static let page: String = "page="
         static let query: String = "query="
     }
