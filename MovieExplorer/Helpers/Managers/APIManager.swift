@@ -25,7 +25,7 @@ class APIManager {
         static let popular: String = "/popular"
         static let search: String = "/search"
         
-        static let apiKey: String = "api_key=\(Keys.v3APIKey)"
+        static let apiKey: String = "api_key=\(Keys.v3APIKey!)"
         static let language: String = "language=ru"
         static let page: String = "page="
         static let query: String = "query="

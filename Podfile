@@ -10,4 +10,5 @@ pod 'RealmSwift'
 pod 'Alamofire'
 pod 'Kingfisher'
 pod 'RxSwift'
+pod 'RxDataSources'
 end

@@ -13,11 +13,16 @@ class MovieDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    private var model: MovieDetailsTableViewCellModel!
+    
+    func setup(model: MovieDetailsTableViewCellModel) {
+        self.model = model
+        selectionStyle = .none
         
         titleLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
         contentLabel.font = UIFont.systemFont(ofSize: 18.0, weight: .regular)
+        titleLabel.text = model.title
+        contentLabel.text = model.content
     }
     
 }
