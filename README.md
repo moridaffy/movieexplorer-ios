@@ -7,7 +7,7 @@
 <h4 align="center">Explore various films using TMDb API</h4>
 
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/moridaffy/kts_test/master/Extra/screen_list.png" alt="Film list" width="250"> <img src="https://raw.githubusercontent.com/moridaffy/kts_test/master/Extra/screen_details.png" alt="Detailed info" width="250">
+<img src="https://raw.githubusercontent.com/moridaffy/movieexplorer-ios/master/Extra/screen_list.png" alt="Film list" width="250"> <img src="https://raw.githubusercontent.com/moridaffy/movieexplorer-ios/master/Extra/screen_details.png" alt="Detailed info" width="250">
 </h1>
 
 <p align="center">
