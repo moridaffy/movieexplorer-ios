@@ -1,40 +1,38 @@
 <h1 align="center">
   <br>
-  KTS
+  MovieExplorer
   <br>
 </h1>
 
-<h4 align="center">Тестовое задание для кандидатов в компании KTS</h4>
+<h4 align="center">Explore various films using TMDb API</h4>
 
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/moridaffy/kts_test/master/Extra/screen_list.png" alt="Список фильмов" width="250"> <img src="https://raw.githubusercontent.com/moridaffy/kts_test/master/Extra/screen_details.png" alt="Детальная информация о фильме" width="250">
+<img src="https://raw.githubusercontent.com/moridaffy/kts_test/master/Extra/screen_list.png" alt="Film list" width="250"> <img src="https://raw.githubusercontent.com/moridaffy/kts_test/master/Extra/screen_details.png" alt="Detailed info" width="250">
 </h1>
 
 <p align="center">
-  <a href="#Информация">Информация</a> •
-  <a href="#Как-запустить">Как запустить</a> •
-  <a href="#Разработчик">Разработчик</a>
+  <a href="#Info">Info</a> •
+  <a href="#TODO">TODO</a> •
+  <a href="#How-to-install">How to install</a> •
+  <a href="#Developer">Developer</a>
 </p>
 
-## Информация
-MovieExplorer - простое приложение, позволяющее пользователю просматривать список самых популярных фильмов (по версии TMDb), а также выполнять поиск фильмов. Также есть возможность добавить фильм в список избранных фильмов и тем самым сохранить локально для просмотра оффлайн
+## Info
+MovieExplorer is a simple app, which allows you to browse information about the most popular films (according to TMDb data) and also search information about any other film. User also can save films locally to access it's information later without internet connection by adding them to "Favorites"
 
-* Информация о фильмах загружаются при помощи публичного  <a href="https://www.themoviedb.org/documentation/api">API TMDb'a</a>
-* Приложение написано на Swift'e и использует следующие сторонние библиотеки: <a href="https://github.com/realm/realm-cocoa">Realm</a> для хранения данных в локальной БД, <a href="https://github.com/SDWebImage/SDWebImage">SDWebImage</a> для асинхронной загрузки изображений (постеров и фонов фильмов) и <a href="https://github.com/Alamofire/Alamofire">Alamofire</a> для выполнения сетевых запросов к API
-* Интерфейсы построены в IB с использованием AutoLayout'a
+* Information is taken from public <a href="https://www.themoviedb.org/documentation/api">TMDb API</a>
+* Code is written in Swift using MVVM architecture
+* Application is using <a href="https://github.com/ReactiveX/RxSwift">RxSwift</a> and <a href="https://github.com/RxSwiftCommunity/RxDataSources">RxDataSources</a> for data binding, <a href="https://github.com/Alamofire/Alamofire">Alamofire</a> for networking, <a href="https://github.com/onevcat/Kingfisher">Kingfisher</a> for asynchronous image loading and caching and <a href="https://github.com/realm/realm-cocoa">Realm</a> for craeting local DB
+* UI adapts to different screen sizes using AutoLayout
 
+## TODO
+- [ ] Russian & English localization
 
-## Как запустить
-Чтобы приложение начало работу после fork'a/загрузки, необходимо выполнить следующие действия:
-* Перейдите в директорию проекта и запустите следующую команду для установки вспомогательных библиотек (необходимо наличие <a href="https://cocoapods.org">CocoaPods</a>
-```
-pod install
-```
-* Открыть файл проекта в XCode (с расширением .workspace)
-* Скомпилировать и запустить проект на симуляторе или физическом устройстве
+## How to install
+* Fork/clone the repo
+* Install pods by running ```pod install``` in terminal from project's folder
+* Open the project using ```.xcworkspace``` file
+* Provide your own API keys in ```APIManager.swift``` file (line 16 and 17)
 
-## Разработчик
-<a href="http://mskr.name">Веб-сайт</a>  
-<a href="http://vk.com/morimax">ВК</a>  
-<a href="http://t.me/moridaffy">Telegram</a>  
-<a href="mailto:dev@mskr.name">E-Mail</a>
+## Developer
+This app was created by Maxim Skryabin as a simple portfolio project. Feel free to contact me using <a href="http://mskr.name/contact/">my website</a>.
