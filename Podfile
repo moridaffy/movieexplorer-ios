@@ -8,6 +8,5 @@ target 'MovieExplorer' do
   # Pods for MovieExplorer
 pod 'RealmSwift'
 pod 'Alamofire'
-pod 'SDWebImage'
-
+pod 'Kingfisher'
 end

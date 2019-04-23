@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-import SDWebImage
+import Kingfisher
 
 class MovieListViewController: UITableViewController {
     
@@ -196,13 +195,14 @@ extension MovieListViewController {
             cell.descLabel.text = movies[indexPath.row].desc
             
             if let posterPath = movies[indexPath.row].posterImageUrl {
-                cell.posterImageView.sd_setImage(with: URL(string: APIManager.URLs.imageBaseUrl + posterPath), placeholderImage: UIImage(named: "poster_placeholder"))
+              
+                cell.posterImageView.kf.setImage(with: URL(string: APIManager.URLs.imageBaseUrl + posterPath), placeholder: UIImage(named: "poster_placeholder"))
             } else {
                 cell.posterImageView.image = UIImage(named: "poster_placeholder")
             }
             
             if let backdropPath = movies[indexPath.row].backdropImageUrl {
-                cell.backdropImageView.sd_setImage(with: URL(string: APIManager.URLs.imageBaseUrl + backdropPath), placeholderImage: nil)
+                cell.backdropImageView.kf.setImage(with: URL(string: APIManager.URLs.imageBaseUrl + backdropPath))
             } else {
                 cell.backdropImageView.image = nil
             }

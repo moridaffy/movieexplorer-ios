@@ -71,13 +71,13 @@ class MovieDetailsViewController: UIViewController {
         titleLabel.text = movie.name
         
         if let posterPath = movie.posterImageUrl {
-            posterImageView.sd_setImage(with: URL(string: APIManager.URLs.imageBaseUrl + posterPath), placeholderImage: UIImage(named: "poster_placeholder"))
+            posterImageView.kf.setImage(with: URL(string: APIManager.URLs.imageBaseUrl + posterPath), placeholder: UIImage(named: "poster_placeholder"))
         } else {
             posterImageView.image = UIImage(named: "poster_placeholder")
         }
         
         if let backdropPath = movie.backdropImageUrl {
-            backdropImageView.sd_setImage(with: URL(string: APIManager.URLs.imageBaseUrl + backdropPath), placeholderImage: nil)
+            backdropImageView.kf.setImage(with: URL(string: APIManager.URLs.imageBaseUrl + backdropPath))
         } else {
             backdropImageView.image = nil
         }
