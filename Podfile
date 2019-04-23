@@ -9,4 +9,5 @@ target 'MovieExplorer' do
 pod 'RealmSwift'
 pod 'Alamofire'
 pod 'Kingfisher'
+pod 'RxSwift'
 end

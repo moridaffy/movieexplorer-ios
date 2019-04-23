@@ -13,8 +13,8 @@ import Alamofire
 class APIManager {
     
     struct Keys {
-        static let v3APIKey: String = "8b846d9fab5a4d08618f17a5e8ebe678"
-        static let v4APIKey: String = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4Yjg0NmQ5ZmFiNWE0ZDA4NjE4ZjE3YTVlOGViZTY3OCIsInN1YiI6IjViZmRhYTJkOTI1MTQxNjlhZDAyZGI3YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xOxoN02lvdi9br3H5caP-i3c3CIKTNchBD5zn2OxZsk"
+        static let v3APIKey: String? = nil
+        static let v4APIKey: String? = nil
     }
     
     struct URLs {
