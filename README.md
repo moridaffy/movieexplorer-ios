@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
-  <br>
   <img src="https://raw.githubusercontent.com/moridaffy/movieexplorer-ios/master/Extra/logo.png" alt="App Icon" width="300">
+  <br>
   MovieExplorer
   <br>
 </h1>
